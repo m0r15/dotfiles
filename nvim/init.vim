@@ -11,6 +11,9 @@ Plug 'morhetz/gruvbox'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+" auto commenter
+Plug 'preservim/nerdcommenter', { 'on': 'NERDCommenterToggle' }
+
 " Initialize plugin system
 call plug#end()
 " =============================================================================
@@ -41,7 +44,7 @@ endif
 autocmd! BufWritePost vimrc_path call ReloadVimrc()
 " =============================================================================
 
-" Key Mappings
-
+" == Key Bindings ===================================================
 map <C-n> :NERDTreeToggle<CR>
+map <C-/> :NERDCommenterToggle<CR>
 
