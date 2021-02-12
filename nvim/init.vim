@@ -28,9 +28,12 @@ set number
 set expandtab
 set tabstop=4
 set cursorline
+set noswapfile
 
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 " =============================================================================
 " Reloads vimrc after saving but keep cursor position

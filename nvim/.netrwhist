@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/m0r15/Projects/cbb/data/logs'
+let g:netrw_dirhist_1='/Users/m0r15/Projects/cbb/share/CloudBerry Backup Develop/Contents/Resources/share'
+let g:netrw_dirhist_0='/Users/m0r15/Projects/cbb/share/CloudBerry Backup Develop/Contents/Resources'
+let g:netrw_dirhist_9='/Users/m0r15/Projects/cbb/share/CloudBerry Backup Develop/Contents'
+let g:netrw_dirhist_8='/Users/m0r15/Projects/cbb/share/CloudBerry Backup Develop'
+let g:netrw_dirhist_7='/Users/m0r15/Projects/cbb/share'
+let g:netrw_dirhist_6='/Users/m0r15/Projects/dotfiles/alacritty'
+let g:netrw_dirhist_5='/Users/m0r15/Projects/dotfiles'
+let g:netrw_dirhist_4='/Users/m0r15/Projects/dotfiles/alacritty'
+let g:netrw_dirhist_3='/Users/m0r15/Projects/dotfiles'
