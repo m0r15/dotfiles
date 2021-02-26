@@ -74,4 +74,4 @@
                      (cons 'height (/ (- (x-display-pixel-height) 200)
                                       (frame-char-height)))))))
 ;; call frame resize
-(after! set-frame-size-according-to-resolution)
+(set-frame-size-according-to-resolution)
