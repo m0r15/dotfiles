@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+#
+#  __  __  ___  ____  __  ___
+# (  \/  )/ _ \(  _ \/  )| __)  | Aleksey Serenkov (m0r15)
+#  )    (( (_) ))   / )( |__ \  | serenkovav@gmail.com
+# (_/\/\_)\___/(_)\_)(__)(___/  |
+#
+# Main entry script for dotfiles, used for route command to appropriate scripts
+#
+
+mydir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+function usage() {
+    echo -e "Usage: dotfile [-h] [-v] [COMMANDS] [OPTIONS] ...
+
+Interactive manage dotfiles
+
+Optional arguments:
+  -h, --help\t\tshow this help messageand exit
+  -v, --version\t\tshow current version
+
+Available commands:
+  install   \t\tinstall symlink on dotfiles to home
+  add       \t\tadd dotfile to TODO"
+}
+
+function list_commands() {
+    find "${mydir}"/scripts/ -type f -print0 \
+        | xargs -I __ -0 basename __ \
+        | xargs -I __ "${mydir}"/dotfile __ -h
+}
+
+function execute_command() {
+    [[ "$#" -eq 0 ]] \
+        && list_commands \
+        && exit 0
+
+    if [[ -x "${mydir}/scripts/$1" ]]; then
+        exec "${mydir}/scripts/$1" "${@:2}"
+    fi
+}
+
+# if no argument display all posible action
+if [[ "$#" -eq 0 ]]; then
+    list_commands
+    exit 0
+fi
+
+case "$1" in
+    --help|-h)
+        usage
+        exit 0
+        ;;
+    -v|--version)
+        echo "Current version: $DOTFILE_VERSION"
+        exit 0
+        ;;
+    *)
+        execute_command "$@"
+        ;;
+esac
