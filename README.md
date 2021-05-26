@@ -1,4 +1,24 @@
+```
+ __  __  ___  ____  __  ___ 
+(  \/  )/ _ \(  _ \/  )| __)  | Aleksey Serenkov (m0r15)
+ )    (( (_) ))   / )( |__ \  | serenkovav@gmail.com
+(_/\/\_)\___/(_)\_)(__)(___/  |
+
+```
+
+m0r15's dotfiles
+-----------------
+
+## Table of contents
+
+
+## Text avatar
+use https://patorjk.com/software/taag/#p=testall&f=Doom&t=m0r15
+
+## Control dotfiles
+
 # dotfiles
+
 
 ## nvim
 
