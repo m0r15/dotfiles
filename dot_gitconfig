@@ -1,0 +1,20 @@
+[user]
+	name = m0r15
+	email = serenkovav@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = warn
+	pager = cat
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[format]
+	pretty = %h %ad | %s%d [%an]
+[log]
+	date = short
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[pager]
+	log = less -FX
+	diff = less -FX
