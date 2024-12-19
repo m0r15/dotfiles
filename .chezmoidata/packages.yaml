@@ -3,8 +3,5 @@ packages:
     brews:
     - 'git'
     - 'cmake'
-    - 'chezmoi'
-    - 'jq'
-    - 'vifm'
     casks:
 
