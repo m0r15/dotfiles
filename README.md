@@ -8,4 +8,4 @@
 
 ## Links
 
-- [chezmoi](sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git)
+- [chezmoi](https://www.chezmoi.io/)
