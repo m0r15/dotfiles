@@ -1,0 +1,26 @@
+packages:
+  darwin:
+
+    brews:
+
+    # System
+    - 'bash'
+    - 'coreutils'   # Those that come with macOS outdated
+    - 'git'
+    - 'openssl'
+    - 'zlib'
+    - 'xz'
+    
+    # CLI utilities
+    - 'bat'         # Better cat
+    - 'fd'          # Better find
+    - 'lsd'         # Better ls
+    - 'grep'        # Non comments
+    - 'helix'       # Text editor
+    - 'nvim'
+    - 'ripgrep'     # Alternate for grep
+    - 'tealdeer'    # Better manpages
+    - 'fzf'         # Fuzzy finder
+    - 'zoxide'      # Better cd in Terminal
+
+    casks:
