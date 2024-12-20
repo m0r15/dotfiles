@@ -19,19 +19,6 @@
 {{- $hostname := .chezmoi.hostname -}}
 {{- $is_desktop = true -}}
 {{- $include_work = true -}}
-{{- /*if eq .chezmoi.os "darwin" -}}
-{{-   $serialNumberSHA256Sum := index ioreg "IORegistryEntryChildren" 0 "IOPlatformSerialNumber" | sha256sum -}}
-{{-   if eq $serialNumberSHA256Sum "8a3df051540c8f8f000265e31fdc84196b7a91335f64c224a6e48c552f88c8e0" -}}
-{{-     $hostname = "jussis-imac" -}}
-{{-     $is_desktop = true -}}
-{{-     $include_work = true -}}
-{{-   else if eq $serialNumberSHA256Sum "b36d8a635d1d25f2cf3c62b1f31c069ec8b46ce4e1848ff46cf7f3d6ecfe3148" -}}
-{{-     $hostname = "10000853il004" -}}
-{{-     $is_desktop = true -}}
-{{-     $include_work = true -}}
-{{-     $is_owned_by_employer = true -}}
-{{-   end -}}
-{{- end*/ -}}
 
 {{- if not $is_ephemeral -}}
 {{-   if eq .chezmoi.os "darwin" "windows" -}}
@@ -59,7 +46,7 @@
 {{- /* Initializes the variables with a default values or promts for input */ -}}
 {{- $name := "m0r15" -}}
 {{- if $interactive -}}
-{{-   $name = promptStringOnce . "name" "Your full name" -}}
+{{-   $name = promptStringOnce . "name" "Your nickname" -}}
 {{- end -}}
 
 {{- $email_main := "serenvkovav@gmail.com" -}}
@@ -101,15 +88,3 @@ data:
   is_ephemeral: {{ $is_ephemeral }}
   is_codespace: {{ $is_codespace }}
 
-{{- if $is_desktop }}
-  public_key_main: {{ onepasswordRead "op://personal/dsef3t2ki64l3dvdeidjmilgi4/public key" }}
-  public_key_work: {{ onepasswordRead "op://personal/bhv4b63xmqg5j7yczdpf3gldvq/public key" }}
-{{- end }}
-
-hooks:
-  apply:
-    post:
-      command: command
-      args:
-        // - pyenv
-        - rehash
