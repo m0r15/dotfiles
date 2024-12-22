@@ -24,3 +24,6 @@ packages:
     - 'zoxide'      # Better cd in Terminal
 
     casks:
+
+    # Develop
+    - 'zed'
