@@ -27,3 +27,10 @@ packages:
 
     # Develop
     - 'zed'
+
+    # CLI utilities
+    - 'ghostty'
+
+    # NERD Fonts
+    - 'font-jetbrains-mono-nerd-font'
+    - 'font-hack-nerd-font'
