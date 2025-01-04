@@ -22,6 +22,7 @@ packages:
     - 'tealdeer'    # Better manpages
     - 'fzf'         # Fuzzy finder
     - 'zoxide'      # Better cd in Terminal
+    - 'bottom'      # Proccess/system monitor
 
     casks:
 
