@@ -17,6 +17,9 @@ path=(
   ${PYENV_ROOT:-$HOME/.pyenv}/shims(N) {{- /* Used by pyenv */}}
   {{- end }}
 
+  {{- /* ### Qt dir ### */}}
+  /opt/qt5
+
   {{- /* ### Other ### */}}
   $path
 )
