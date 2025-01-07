@@ -31,7 +31,7 @@ packages:
     - 'zed'
 
     # CLI utilities
-    - 'ghostty'
+    #- 'ghostty'
 
     # NERD Fonts
     - 'font-jetbrains-mono-nerd-font'
