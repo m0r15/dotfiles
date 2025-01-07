@@ -23,6 +23,7 @@ packages:
     - 'fzf'         # Fuzzy finder
     - 'zoxide'      # Better cd in Terminal
     - 'bottom'      # Proccess/system monitor
+    - 'tmux'        # like a screen terminal tiling
 
     casks:
 
