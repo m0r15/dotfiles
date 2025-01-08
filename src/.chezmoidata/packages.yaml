@@ -25,6 +25,9 @@ packages:
     - 'bottom'      # Proccess/system monitor
     - 'tmux'        # like a screen terminal tiling
 
+    # DEV
+    - 'ninja'
+
     casks:
 
     # Develop
