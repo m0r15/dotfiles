@@ -28,6 +28,7 @@ packages:
     # DEV
     - 'ninja'
     - 'shellcheck'
+    - 'shfmt'
 
     casks:
 
