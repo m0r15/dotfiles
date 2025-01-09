@@ -27,6 +27,7 @@ packages:
 
     # DEV
     - 'ninja'
+    - 'shellcheck'
 
     casks:
 
