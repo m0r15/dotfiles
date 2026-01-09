@@ -16,7 +16,12 @@
 {{- end -}}
 
 {{- /* work around unreliable hostname on darwin */ -}}
+
 {{- $hostname := .chezmoi.hostname -}}
+{{- if $interactive -}}
+{{-   $hostname = promptStringOnce . "hostname" "Host name" -}}
+{{- end -}}
+
 {{- $is_desktop = true -}}
 {{- $include_work = true -}}
 
@@ -55,7 +60,7 @@
 {{- end -}}
 
 {{- /* $include_work already initialized previously */ -}}
-{{- $email_work := "alexey.serenkov@msp360.com" -}}
+{{- $email_work := "" -}}
 {{- if $interactive -}}
 {{-   $include_work = promptBoolOnce . "include_work" "Include work-related configs" -}}
 {{-   if $include_work -}}
