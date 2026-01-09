@@ -16,8 +16,9 @@ packages:
     - 'fd'          # Better find
     - 'lsd'         # Better ls
     - 'grep'        # Non comments
-    - 'helix'       # Text editor
-    - 'nvim'
+    #- 'helix'       # Text editor
+    - 'vim'         # Vim like simple editor
+    - 'nvim'        # NVim use like ide
     - 'ripgrep'     # Alternate for grep
     - 'tealdeer'    # Better manpages
     - 'fzf'         # Fuzzy finder
