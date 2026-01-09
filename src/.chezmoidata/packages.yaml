@@ -25,6 +25,7 @@ packages:
     - 'zoxide'      # Better cd in Terminal
     - 'bottom'      # Proccess/system monitor
     - 'tmux'        # like a screen terminal tiling
+    - 'fastfetch'   # Info cli utility
 
     # DEV
     - 'ninja'
