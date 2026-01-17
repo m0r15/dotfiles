@@ -1,0 +1,64 @@
+" Enable highlighting
+syntax on
+
+" Turn off compatibility with old Vi
+set nocompatible
+
+" Enable line numbers
+set number
+
+" Enable relative line numbers
+set relativenumber
+
+" Enable expand indent for plugin. Needed for vim-plug
+filetyp plugin indent on
+
+" Use spaces instead of tabs
+set expandtab
+
+" Set number of spaces for tab/ident
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Set smart indentation for programming languages
+set autoindent
+set smartindent
+
+" Highlight the current line the cursor is on
+"set cursorline
+
+" Enable mouse support in the terminal
+set mouse=a
+
+" Always display the status line
+"set laststatus=2
+
+" Enable highlighting when searching
+set hlsearch
+
+" Make search case-ins unless an uppercase letter is used
+set smartcase
+
+"================================================================================
+" Download vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" List plugins
+call plug#begin()
+
+" Chezmoi syntax highlight
+Plug 'alker0/chezmoi.vim'
+" Chezmoi to apply edited file on save
+Plug 'Lilja/vim-chezmoi'
+
+call plug#end()
+"================================================================================
+
+" Keymap
+" jk like esc
+inoremap jk <Esc>
