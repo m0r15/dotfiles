@@ -1,6 +1,7 @@
 # Export PATH
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/bin
 
 set -gx EDITOR vim
 set -gx VISUAL vim
