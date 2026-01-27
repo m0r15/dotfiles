@@ -40,6 +40,9 @@ set hlsearch
 " Make search case-ins unless an uppercase letter is used
 set smartcase
 
+" Swap off
+set noswapfile
+
 "================================================================================
 " Download vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
